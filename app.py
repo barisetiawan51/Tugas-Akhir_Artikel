@@ -6,8 +6,8 @@ import gdown # type: ignore
 import os
 
 # Unduh model dari Google Drive jika belum ada
-model_url = "https://drive.google.com/file/d/1Zod5eKU3KnqyHW-KhOXqmNBfjL4Fnl9f"
-scaler_url = "https://drive.google.com/file/d/1-2hoR-iO4wUDo-8vAMZ8rN2KE4QgcAX2"
+model_url = "https://drive.google.com/uc?id=1Zod5eKU3KnqyHW-KhOXqmNBfjL4Fnl9f"
+scaler_url = "https://drive.google.com/uc?id=1-2hoR-iO4wUDo-8vAMZ8rN2KE4QgcAX2"
 model_path = 'stacking_model_compressed.pkl'
 scaler_path = 'scaler.pkl'
 
