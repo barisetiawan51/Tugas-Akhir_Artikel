@@ -2,21 +2,11 @@ import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
-import gdown # type: ignore
-import os
+from huggingface_hub import hf_hub_download
 
-# Unduh model dari Google Drive jika belum ada
-model_url = "https://drive.google.com/uc?id=1Zod5eKU3KnqyHW-KhOXqmNBfjL4Fnl9f"
-scaler_url = "https://drive.google.com/uc?id=1-2hoR-iO4wUDo-8vAMZ8rN2KE4QgcAX2"
-model_path = 'stacking_model_compressed.pkl'
-scaler_path = 'scaler.pkl'
-
-# Jika model dan scaler belum ada, unduh dari Google Drive
-if not os.path.exists(model_path):
-    gdown.download(model_url, model_path, quiet=False)
-
-if not os.path.exists(scaler_path):
-    gdown.download(scaler_url, scaler_path, quiet=False)
+# Unduh model dari Hugging Face
+model_path = hf_hub_download(repo_id="barisetiawan51/stacking-model", filename="stacking_model_compressed.pkl")
+scaler_path = hf_hub_download(repo_id="barisetiawan51/stacking-model", filename="scaler.pkl")
 
 # Memuat model stacking dan scaler
 try:
