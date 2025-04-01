@@ -1,0 +1,7 @@
+streamlit
+joblib
+scikit-learn
+huggingface_hub
+pandas
+numpy
+gdown==4.0.0
