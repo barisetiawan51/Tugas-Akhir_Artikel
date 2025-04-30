@@ -5,7 +5,7 @@ import numpy as np
 from huggingface_hub import hf_hub_download
 
 # Unduh model dari Hugging Face
-model_path = hf_hub_download(repo_id="barisetiawan51/stacking-model-100", filename="stacking_model_100_compressed.pkl")
+model_path = hf_hub_download(repo_id="barisetiawan51/stacking-model", filename="stacking_model.pkl")
 scaler_path = hf_hub_download(repo_id="barisetiawan51/stacking-model", filename="scaler.pkl")
 
 # Memuat model stacking dan scaler
